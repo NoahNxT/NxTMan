@@ -48,3 +48,30 @@ h1 {
   border-radius: 30px;
   font-size: 18px;
 }
+
+/* index.html */
+.hoeraPageContainer {
+  width: 80vw;
+  height: 200px;
+  /* om te centreren */
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  justify-items: center;
+}
+
+.buttonMijnBeurt--Hoera {
+  width: 100px;
+  color: black;
+  background-color: rgb(187, 187, 187);
+  border-radius: 30px;
+  height: 44px;
+  width: 60vw;
+  padding: 5px 15px;
+  font-size: 18px;
+}
