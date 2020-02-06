@@ -64,7 +64,8 @@ h1 {
   justify-items: center;
 }
 
-.buttonMijnBeurt--Hoera {
+.buttonMijnBeurt--Hoera,
+.buttonMijnBeurt--Boe {
   width: 100px;
   color: black;
   background-color: rgb(187, 187, 187);
