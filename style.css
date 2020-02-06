@@ -10,7 +10,6 @@ body {
 .IndexPageContainer {
   width: 80vw;
   height: 200px;
-  /* om te centreren */
   position: absolute;
   top: 0;
   bottom: 0;
@@ -50,10 +49,10 @@ h1 {
 }
 
 /* index.html */
-.hoeraPageContainer {
+.hoeraPageContainer,
+.boePageContainer {
   width: 80vw;
   height: 200px;
-  /* om te centreren */
   position: absolute;
   top: 0;
   bottom: 0;
