@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="style.css" />
-  <title>Hangman start</title>
+  <title>Hangman</title>
 </head>
 <body>
 
@@ -24,7 +24,12 @@
   </div>
 
   <div class="gridOutput">
-
+    <div class="guessedLetter">K</div>
+    <div class="guessedLetter">I</div>
+    <div class="guessedLetter">K</div>
+    <div class="guessedLetter">K</div>
+    <div class="guessedLetter">E</div>
+    <div class="guessedLetter">R</div>
   </div>
   
   <div class="gridInput">
@@ -55,7 +60,6 @@
     <button id="y" class="key">Y</button>    
     <button id="z" class="key">Z</button>
   </div> 
-
 </div>
 
 </body>
