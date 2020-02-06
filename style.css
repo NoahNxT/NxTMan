@@ -56,7 +56,7 @@ h1 {
 .boePageContainer,
 .gamePageContainer {
   width: 80vw;
-  height: 200px;
+  height: 450px;
   position: absolute;
   top: 0;
   bottom: 0;
@@ -80,9 +80,64 @@ h1 {
   font-size: 18px;
 }
 
-/* game.php */
+/* ----------game.php---------- */
 
-.keyContainer {
+/* hangman images */
+
+.hangmanImages {
+  /* display: inline-block; */
+  position: relative;
+  height: 200px;
+  width: 200px;
+}
+
+.hangmanImages--img1,
+.hangmanImages--img2,
+.hangmanImages--img3,
+.hangmanImages--img4,
+.hangmanImages--img5,
+.hangmanImages--img6,
+.hangmanImages--img7,
+.hangmanImages--img8,
+.hangmanImages--img9,
+.hangmanImages--img10 {
+  position: absolute;
+}
+
+.hangmanImages--img1 {
+  z-index: 1;
+}
+.hangmanImages--img2 {
+  z-index: 2;
+}
+.hangmanImages--img3 {
+  z-index: 3;
+}
+.hangmanImages--img4 {
+  z-index: 4;
+}
+.hangmanImages--img5 {
+  z-index: 5;
+}
+.hangmanImages--img6 {
+  z-index: 6;
+}
+.hangmanImages--img7 {
+  z-index: 7;
+}
+.hangmanImages--img8 {
+  z-index: 8;
+}
+.hangmanImages--img9 {
+  z-index: 9;
+}
+.hangmanImages--img10 {
+  z-index: 10;
+}
+
+/* keyboard */
+
+.gridInput {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
   grid-gap: 10px;
@@ -90,8 +145,8 @@ h1 {
 }
 
 .key {
-  height: 40px;
-  width: 40px;
+  height: 10vw;
+  width: 10vw;
   background-color: rgb(187, 187, 187);
   color: black;
   font-size: 18px;
@@ -101,5 +156,5 @@ h1 {
 }
 
 .key:active {
-  background-color: rgb(177, 255, 221);
+  background-color: #9cd4d6;
 }
