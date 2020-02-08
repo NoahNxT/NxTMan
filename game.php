@@ -62,5 +62,14 @@
   </div> 
 </div>
 
+
+<?php 
+  if (isset($_POST["chosen_word"]))
+  {
+    $chosen_word = $_POST["chosen_word"];
+    echo $chosen_word;
+  }
+?>
+
 </body>
 </html>
