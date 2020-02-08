@@ -9,6 +9,26 @@
 </head>
 <body>
 
+<?php 
+  //retrieving chosen word of index into variable
+  if (isset($_POST["chosen_word"]))
+  {
+    $chosen_word = $_POST["chosen_word"];
+    // echo $chosen_word;
+  }
+
+  //Count amount of characters in chosen word
+  $amount_Letters = strlen($chosen_word);
+  //echo $amount_Letters;
+
+  for ($x = 1; $x == $amount_Letters; $x++) 
+  {
+    echo '<div class="guessedLetter">A</div>';
+  }
+
+
+?>
+
 <div class="gamePageContainer">
   <div class="hangmanImages">
     <img id="1" class="hangmanImages--img1" src="img/hangmanImg/1.jpg" alt="" width=200 height=200>
@@ -24,12 +44,12 @@
   </div>
 
   <div class="gridOutput">
-    <div class="guessedLetter">K</div>
-    <div class="guessedLetter">I</div>
-    <div class="guessedLetter">K</div>
-    <div class="guessedLetter">K</div>
-    <div class="guessedLetter">E</div>
-    <div class="guessedLetter">R</div>
+    <?php
+      for ($x = 1; $x <= $amount_Letters; $x++) 
+      {
+        echo '<div class="guessedLetter">_</div>';
+      }
+    ?>    
   </div>
   
   <div class="gridInput">
@@ -64,11 +84,23 @@
 
 
 <?php 
+  //retrieving chosen word of index into variable
   if (isset($_POST["chosen_word"]))
   {
     $chosen_word = $_POST["chosen_word"];
-    echo $chosen_word;
+    // echo $chosen_word;
   }
+
+  //Count amount of characters in chosen word
+  $amount_Letters = strlen($chosen_word);
+  //echo $amount_Letters;
+
+  for ($x = 1; $x == $amount_Letters; $x++) 
+  {
+    echo '<div class="guessedLetter">A</div>';
+  }
+
+
 ?>
 
 </body>
