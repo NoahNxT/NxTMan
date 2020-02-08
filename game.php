@@ -21,12 +21,9 @@
   $amount_Letters = strlen($chosen_word);
   //echo $amount_Letters;
 
-  for ($x = 1; $x == $amount_Letters; $x++) 
-  {
-    echo '<div class="guessedLetter">A</div>';
-  }
-
-
+  //split every letter individual in array
+  $split_Word_Arr = str_split($chosen_word);
+  //print_r($split_Word_Arr);
 ?>
 
 <div class="gamePageContainer">
@@ -47,61 +44,50 @@
     <?php
       for ($x = 1; $x <= $amount_Letters; $x++) 
       {
-        echo '<div class="guessedLetter">_</div>';
+        echo '<div class="guessedLetter" id='.$x.' >_</div>';
       }
     ?>    
   </div>
   
-  <div class="gridInput">
-    <button id="a" class="key">A</button>
-    <button id="b" class="key">B</button>
-    <button id="c" class="key">C</button>
-    <button id="d" class="key">D</button>
-    <button id="e" class="key">E</button>
-    <button id="f" class="key">F</button>
-    <button id="g" class="key">G</button>
-    <button id="h" class="key">H</button>
-    <button id="i" class="key">I</button>
-    <button id="j" class="key">J</button>
-    <button id="k" class="key">K</button>
-    <button id="l" class="key">L</button>
-    <button id="m" class="key">M</button>
-    <button id="n" class="key">N</button>
-    <button id="o" class="key">O</button>
-    <button id="p" class="key">P</button>
-    <button id="q" class="key">Q</button>
-    <button id="r" class="key">R</button>
-    <button id="s" class="key">S</button>
-    <button id="t" class="key">T</button>
-    <button id="u" class="key">U</button>
-    <button id="v" class="key">V</button>
-    <button id="w" class="key">W</button>
-    <button id="x" class="key">X</button>
-    <button id="y" class="key">Y</button>    
-    <button id="z" class="key">Z</button>
-  </div> 
+  <form method="post">
+    <div class="gridInput">
+      <button id="a" class="key">A</button>
+      <button id="b" class="key">B</button>
+      <button id="c" class="key">C</button>
+      <button id="d" class="key">D</button>
+      <button id="e" class="key">E</button>
+      <button id="f" class="key">F</button>
+      <button id="g" class="key">G</button>
+      <button id="h" class="key">H</button>
+      <button id="i" class="key">I</button>
+      <button id="j" class="key">J</button>
+      <button id="k" class="key">K</button>
+      <button id="l" class="key">L</button>
+      <button id="m" class="key">M</button>
+      <button id="n" class="key">N</button>
+      <button id="o" class="key">O</button>
+      <button id="p" class="key">P</button>
+      <button id="q" class="key">Q</button>
+      <button id="r" class="key">R</button>
+      <button id="s" class="key">S</button>
+      <button id="t" class="key">T</button>
+      <button id="u" class="key">U</button>
+      <button id="v" class="key">V</button>
+      <button id="w" class="key">W</button>
+      <button id="x" class="key">X</button>
+      <button id="y" class="key">Y</button>    
+      <button id="z" class="key">Z</button>
+    </div> 
+  </form>
+
+
+
 </div>
 
 
-<?php 
-  //retrieving chosen word of index into variable
-  if (isset($_POST["chosen_word"]))
-  {
-    $chosen_word = $_POST["chosen_word"];
-    // echo $chosen_word;
-  }
-
-  //Count amount of characters in chosen word
-  $amount_Letters = strlen($chosen_word);
-  //echo $amount_Letters;
-
-  for ($x = 1; $x == $amount_Letters; $x++) 
-  {
-    echo '<div class="guessedLetter">A</div>';
-  }
 
 
-?>
+
 
 </body>
 </html>
