@@ -1,4 +1,3 @@
-<?php include 'ConnectDB.php' ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,22 +6,14 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="style.css" />
   <title>Hangman</title>
-  <?php include 'ConnectDB.php';
-   ?>
+  <?php 
+    include 'ConnectDB.php'; 
+    //include 'ButtonAction.php';
+  ?>
 </head>
 <body>
 
 <?php 
-
-
-
-
-
-/*
-include 'ChosenWordEdits.php' ;
-ParseWord();
-AmountLetters();
-SplitIntoArray();*/
 
 //retrieving chosen word of index into variable
 if (isset($_POST["chosen_word"]))
@@ -66,23 +57,8 @@ $split_Word_Arr = str_split($chosen_word);
       {
         echo '<div class="guessedLetter" id='.$x.' >_</div>';
       }
-    ?>
+      ?>
   </div>
-  
-  <?php 
-  if( isset( $_REQUEST['a'] ))
-  {
-    $chosen_Letter = $_POST['a'];
-    echo  $chosen_Letter;
-    $send_Letter = "INSERT INTO	pickedletters	(Letter) VALUES ('$chosen_Letter')";  
-    if (mysqli_query($conn, $send_Letter)) 
-    {
-      echo "New record created successfully";
-    }else {
-      echo "Error: " . $send_Letter . "" . mysqli_error($conn);
-   }
-  }   
-  ?>
 
 <form action="" method="post">
   <div class="gridInput">
