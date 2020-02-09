@@ -57,49 +57,33 @@ $split_Word_Arr = str_split($chosen_word);
     <img id="9" class="hangmanImages--img9" src="img/hangmanImg/9.jpg" alt="" width=200 height=200>
     <img id="10" class="hangmanImages--img10" src="img/hangmanImg/10.jpg" alt="" width=200 height=200>
   </div>
-  <div class="gridOutput">
-  <?php 
-    //GridOutput() ;
 
-    for ($x = 1; $x <= $amount_Letters; $x++) 
-    {
-      echo '<div class="guessedLetter" id='.$x.' >_</div>';
-    }
+  <div class="gridOutput">
+    <?php 
+      //GridOutput() ;
+
+      for ($x = 1; $x <= $amount_Letters; $x++) 
+      {
+        echo '<div class="guessedLetter" id='.$x.' >_</div>';
+      }
     ?>
   </div>
   
   <?php 
-
-
-
   if( isset( $_REQUEST['a'] ))
   {
-    /*$servername = "localhost";
-    $username = "root";
-    $password = "";
-    $dbname = "nxtman";
-
-    // Create connection
-    $conn = new mysqli($servername, $username, $password, $dbname);
-    // Check connection
-    if ($conn->connect_error) {
-        die("Connection failed: " . $conn->connect_error);
-    }
-*/
     $chosen_Letter = $_POST['a'];
     echo  $chosen_Letter;
-    $send_Letter = "INSERT INTO	pickedletters	(Letter) VALUES ('$chosen_Letter')";
-      
+    $send_Letter = "INSERT INTO	pickedletters	(Letter) VALUES ('$chosen_Letter')";  
     if (mysqli_query($conn, $send_Letter)) 
     {
       echo "New record created successfully";
     }else {
       echo "Error: " . $send_Letter . "" . mysqli_error($conn);
    }
-  }
-
-    
+  }   
   ?>
+
 <form action="" method="post">
   <div class="gridInput">
     <input type="submit" name="a" value="A" class="key">
