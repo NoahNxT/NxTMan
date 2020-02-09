@@ -1,13 +1,14 @@
 <?php 
 
-function ParseWord() 
+function ParseWord($chosen_word) 
 {
     //retrieving chosen word of index into variable
     if (isset($_POST["chosen_word"]))
     {
         $chosen_word = $_POST["chosen_word"];
-        //echo $chosen_word;
+        echo $chosen_word;
     }
+        return  $chosen_word;
 }
 
 function AmountLetters()
@@ -17,7 +18,7 @@ function AmountLetters()
     //echo $amount_Letters;
 }
 
-function SplitIntoArray)()
+function SplitIntoArray()
 {
     //split every letter individual in array
     $split_Word_Arr = str_split($chosen_word);
