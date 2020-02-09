@@ -6,11 +6,11 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="style.css" />
   <title>Hangman</title>
-  <?php 
-    include 'ConnectDB.php'; 
-    //include 'ButtonAction.php';
-  ?>
 </head>
+<?php 
+    include 'ConnectDB.php'; 
+    include 'ButtonAction.php';
+  ?>
 <body>
 
 <?php 
@@ -51,8 +51,6 @@ $split_Word_Arr = str_split($chosen_word);
 
   <div class="gridOutput">
     <?php 
-      //GridOutput() ;
-
       for ($x = 1; $x <= $amount_Letters; $x++) 
       {
         echo '<div class="guessedLetter" id='.$x.' >_</div>';
@@ -64,12 +62,11 @@ $split_Word_Arr = str_split($chosen_word);
   <div class="gridInput">
     <input type="submit" name="a" value="A" class="key">
     <?php 
-    $alphas = range('A', 'Z');
-
-    for ($x = 1; $x < count($alphas); $x++) 
-    {
+      $alphas = range('A', 'Z');
+      for ($x = 1; $x < count($alphas); $x++) 
+      {
       echo '<input type="submit" name="'.$alphas[$x].'" value="'.$alphas[$x].'" class="key">';
-    }
+      }
     ?>
   </div> 
   </form>
