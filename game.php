@@ -8,9 +8,10 @@
   <title>Hangman</title>
 </head>
 <?php 
+    
     include 'ConnectDB.php'; 
     include 'ButtonAction.php';
-    include_once 'load.php';
+    include 'load.php';
   ?>
 <body>
 
@@ -34,11 +35,12 @@
 
   <div class="gridOutput">
     <?php 
-      for ($x = 1; $x <= $amount_Letters; $x++) 
-      {
-        echo '<div class="guessedLetter" id='.$x.' >_</div>';
+        for ($x = 1; $x <= $amount_Letters; $x++) 
+        {
+          echo '<div class="guessedLetter" id='.$x.' >_</div>';
+        }
       }
-      ?>
+    ?>
   </div>
 
 <form action="" method="post">

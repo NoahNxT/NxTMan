@@ -1,5 +1,5 @@
 <?php 
-
+include 'ConnectDB.php';
 //retrieving chosen word of index into variable
 if (isset($_POST["chosen_word"]))
 {
@@ -14,7 +14,8 @@ if (isset($_POST["chosen_word"]))
     $split_Word_Arr = str_split($chosen_word);
     //print_r($split_Word_Arr);
     */
-
+    
+    
 
     $send_Word = "INSERT INTO session (`WORD`,`LENGTH`) VALUES ('$chosen_word','$amount_Letters')";  
             if (mysqli_query($conn, $send_Word)) 
