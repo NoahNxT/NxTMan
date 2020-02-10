@@ -17,8 +17,8 @@ if (isset($_POST["chosen_word"]))
     
     
 
-    $sql = "INSERT INTO session (`WORD`,`LENGTH`) VALUES ('$chosen_word','$amount_Letters')";  
-    $sql .= "DELETE FROM pickedletters"
+    $sql = "INSERT INTO session (`WORD`,`LENGTH`) VALUES ('$chosen_word','$amount_Letters');";  
+    $sql .= "DELETE FROM `pickedletters`";
             if (mysqli_multi_query($conn, $sql)) 
             {
             echo "New record created successfully";
@@ -26,7 +26,7 @@ if (isset($_POST["chosen_word"]))
             }
             else 
             {
-            echo "Error: " . $send_Word . "" . mysqli_error($conn);
+            echo "Error: " . $sql . "" . mysqli_error($conn);
             }
 }
 ?>
