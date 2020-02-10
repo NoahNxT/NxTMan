@@ -8,7 +8,7 @@
         {
             $chosen_Letter = $_POST[$alphabet[$x]];
 
-            $send_Letter = "INSERT INTO	pickedletters	(Letter) VALUES ('$chosen_Letter')";  
+            $send_Letter = "INSERT INTO	pickedletters (Letter) VALUES ('$chosen_Letter')";  
             if (mysqli_query($conn, $send_Letter)) 
             {
             echo "New record created successfully";
