@@ -8,18 +8,13 @@
   <link rel="stylesheet" href="style.css" />
   <title>Hangman</title>
 </head>
-<?php
 
+<?php
 include 'ButtonAction.php';
 include 'functionality.php';
 ?>
 
 <body>
-
-
-
-
-
   <div class="gamePageContainer">
     <div class="hangmanImages">
       <img id="1" class="hangmanImages--img1" src="img/hangmanImg/1.jpg" alt="" width=200 height=200>
@@ -39,7 +34,6 @@ include 'functionality.php';
       for ($x = 1; $x <= $amount_Letters['LENGTH']; $x++) {
         echo '<div class="guessedLetter" id=' . $x . ' >_</div>';
       }
-
       ?>
     </div>
 
