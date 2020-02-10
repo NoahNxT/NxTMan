@@ -1,6 +1,6 @@
-<?php 
+<?php
 include 'ConnectDB.php';
-//retrieving chosen word of index into variable
+
 if (isset($_POST["chosen_word"]))
 {
     $chosen_word = $_POST["chosen_word"];
@@ -17,15 +17,16 @@ if (isset($_POST["chosen_word"]))
     
     
 
-    $send_Word = "INSERT INTO session (`WORD`,`LENGTH`) VALUES ('$chosen_word','$amount_Letters')";  
-            if (mysqli_query($conn, $send_Word)) 
+    $sql = "INSERT INTO session (`WORD`,`LENGTH`) VALUES ('$chosen_word','$amount_Letters')";  
+    $sql .= "DELETE FROM pickedletters"
+            if (mysqli_multi_query($conn, $sql)) 
             {
             echo "New record created successfully";
-            }else {
+            header( "Location: /game.php" );
+            }
+            else 
+            {
             echo "Error: " . $send_Word . "" . mysqli_error($conn);
             }
 }
-
-
-
 ?>

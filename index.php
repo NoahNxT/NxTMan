@@ -12,10 +12,11 @@
       <h1>
         Hallo speler 1, bedenk een woord en zorg dat speler 2 het niet ziet!
       </h1>
-      <form method="post" action="game.php" class="formContainer">
+      <form method="post" action="LoadBetweenAddDB.php" class="formContainer">
         <input type="text" name="chosen_word" class="formContainer__input" />
         <input type="submit" class="formContainer__submit" value="start" />
       </form>
     </div>
   </body>
 </html>
+
