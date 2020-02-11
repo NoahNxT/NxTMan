@@ -7,11 +7,7 @@ include 'ConnectDB.php';
     $amount_Letters = mysqli_fetch_assoc($result);
     
     //--------------------
+   
 
-
-
-
-    //-------------------
-    
 
 ?>
