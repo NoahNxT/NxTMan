@@ -27,11 +27,13 @@
             //Elke keer als er op een knop wordt geduwt dan rreshed hij de array en vult hij aan
             while($letters_As_Array = mysqli_fetch_array($result2))
             {
-            /*$letters_As_String = implode("",$letters_As_Array);
-            echo $letters_As_String;*/
-            //$letters_As_Array['Letter']."<br/>";
-            // Working --->   print_r($letters_As_Array['Letter']);
-            
+                /*$letters_As_String = implode("",$letters_As_Array);
+                echo $letters_As_String;*/
+                //$letters_As_Array['Letter']."<br/>";
+                // Working --->   print_r($letters_As_Array['Letter']);
+
+            }	
+
             //Parse Latest added word
             $sql3 = "SELECT `WORD` FROM `session` ORDER BY ID DESC LIMIT 1";
             $result3 = mysqli_query($conn, $sql3);
@@ -42,22 +44,19 @@
             //Split string in array met elke letter apart in volgorde
             $word_Split_Array = str_split($word_As_String);
 
-            
 
-            }				
-            
-            /*
-            $Compare = array_intersect($word_Split_Array, $letters_As_Array);
+           /* $Compare = array_intersect($word_Split_Array, $letters_As_Array);
             for ($x = 0; $x <= count($Compare); $x++) 
             {
                 if ($Compare[$x] == TRUE)
                 {
-                echo $chosen_word[$x].'-';
+                echo $word_Split_Array[$x].'-';
                 }else{
                 echo '@';
                 }
             }
             */
+            
             
 
             
