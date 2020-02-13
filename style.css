@@ -1,10 +1,10 @@
 /* algemeen */
 
-@import url("https://fonts.googleapis.com/css?family=Montserrat&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap");
 
 /* index.html */
 * {
-  font-family: "Montserrat", sans-serif;
+  font-family: "Roboto Mono", monospace;
 }
 
 body {
