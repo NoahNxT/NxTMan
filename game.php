@@ -10,8 +10,10 @@
 </head>
 
 <?php
-include 'ButtonAction.php';
-include 'functionality.php';
+include 'variables.php';
+//include 'ButtonAction.php';
+echo $_SESSION["chosen_Letter"];
+
 ?>
 
 <body>
@@ -31,7 +33,7 @@ include 'functionality.php';
 
     <div class="gridOutput">
       <?php
-      for ($x = 1; $x <= $amount_Letters['LENGTH']; $x++) {
+      for ($x = 1; $x <= $_SESSION["amount_Letter"]; $x++) {
         echo '<div class="guessedLetter" id=' . $x . ' >_</div>';
       }
       ?>
@@ -41,9 +43,8 @@ include 'functionality.php';
       <div class="gridInput">
         <input type="submit" name="a" value="A" class="key">
         <?php
-        $alphas = range('A', 'Z');
-        for ($x = 1; $x < count($alphas); $x++) {
-          echo '<input type="submit" name="' . $alphas[$x] . '" value="' . $alphas[$x] . '" class="key">';
+        for ($x = 1; $x < count($_SESSION["alphas"]); $x++) {
+          echo '<input type="submit" name="' . $_SESSION["alphas"][$x] . '" value="' . $_SESSION["alphas"][$x] . '" class="key">';
         }
         ?>
       </div>
