@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -11,8 +12,7 @@
 
 <?php
 include 'variables.php';
-//include 'ButtonAction.php';
-echo $_SESSION["chosen_Letter"];
+include 'ButtonAction.php';
 
 ?>
 
