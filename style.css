@@ -1,0 +1,181 @@
+/* algemeen */
+
+@import url("https://fonts.googleapis.com/css?family=Montserrat&display=swap");
+
+/* index.html */
+* {
+  font-family: "Montserrat", sans-serif;
+}
+
+body {
+  margin: 0px;
+}
+
+.IndexPageContainer {
+  width: 80vw;
+  height: 200px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+h1 {
+  font-size: 22px;
+  margin: 0px 0px 20px 0px;
+  text-align: center;
+  place-self: center;
+}
+
+.formContainer {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  justify-items: center;
+}
+
+.formContainer__input {
+  border: 1px solid black;
+  border-radius: 30px;
+  height: 30px;
+  outline: none;
+  padding: 0px 15px;
+  font-size: 18px;
+  margin: 0px 0px 20px 0px;
+}
+
+.formContainer__submit {
+  width: 100px;
+  color: black;
+  border-radius: 30px;
+  font-size: 18px;
+}
+
+/* index.html */
+.hoeraPageContainer,
+.boePageContainer,
+.gamePageContainer {
+  width: 80vw;
+  height: 450px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  justify-items: center;
+}
+
+.buttonMijnBeurt--Hoera,
+.buttonMijnBeurt--Boe {
+  width: 100px;
+  color: black;
+  background-color: rgb(187, 187, 187);
+  border-radius: 30px;
+  border: none;
+  outline: none;
+  height: 44px;
+  width: 60vw;
+  padding: 5px 15px;
+  font-size: 18px;
+  place-self: center;
+}
+
+.buttonMijnBeurt--Hoera:active,
+.buttonMijnBeurt--Boe:active {
+  background-color: rgb(128, 255, 206);
+}
+
+/* ----------game.php---------- */
+
+/* hangman images */
+
+.hangmanImages {
+  position: relative;
+  height: 200px;
+  width: 200px;
+}
+
+.hangmanImages--img1,
+.hangmanImages--img2,
+.hangmanImages--img3,
+.hangmanImages--img4,
+.hangmanImages--img5,
+.hangmanImages--img6,
+.hangmanImages--img7,
+.hangmanImages--img8,
+.hangmanImages--img9,
+.hangmanImages--img10 {
+  position: absolute;
+}
+
+.hangmanImages--img1 {
+  z-index: 1;
+}
+.hangmanImages--img2 {
+  z-index: 2;
+}
+.hangmanImages--img3 {
+  z-index: 3;
+}
+.hangmanImages--img4 {
+  z-index: 4;
+}
+.hangmanImages--img5 {
+  z-index: 5;
+}
+.hangmanImages--img6 {
+  z-index: 6;
+}
+.hangmanImages--img7 {
+  z-index: 7;
+}
+.hangmanImages--img8 {
+  z-index: 8;
+}
+.hangmanImages--img9 {
+  z-index: 9;
+}
+.hangmanImages--img10 {
+  z-index: 10;
+}
+
+/* gridOutput (letters)*/
+
+.gridOutput {
+  display: flex;
+  flex-direction: row;
+  margin: 20px 0px 0px 0px;
+}
+
+.guessedLetter {
+  padding: 0px 5px 0px 0px;
+  font-size: 18px;
+}
+
+/* gridInput (keyboard) */
+
+.gridInput {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-gap: 10px;
+  margin: 20px 0px 0px 0px;
+}
+
+.key {
+  height: 10vw;
+  width: 10vw;
+  background-color: rgb(187, 187, 187);
+  color: black;
+  font-size: 18px;
+  border-radius: 10px;
+  outline: none;
+  border: none;
+}
+
+.key:active {
+  background-color: #9cd4d6;
+}
