@@ -45,7 +45,7 @@ include 'ConnectDB.php';
     $letters = array("l","a");
     $result = array_intersect($woord, $letters);
     
-    for ($x = 0; $x <= count($result); $x++) 
+    for ($x = 0; $x <= count($woord); $x++) 
        {
         if ($result[$x] == TRUE)
         {
