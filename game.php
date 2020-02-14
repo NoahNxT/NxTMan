@@ -22,8 +22,6 @@ include 'ButtonAction.php';
       <?php
       echo '<img id="1" class="hangmanImages--img'.$_SESSION["count"].'" src="img/hangmanImg/'.$_SESSION["count"].'.png" alt="" width=200 height=200>';
       ?>
-      
-      
     </div>
 
     <div class="gridOutput">

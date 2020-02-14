@@ -24,7 +24,7 @@ session_destroy();
     <link rel="stylesheet" href="style.css" />
     <title>Hangman</title>
   </head>
-  <body>
+  <body class="boePageBody">
     <div class="boePageContainer">
       <h1>
         Boe...volgende keer beter!

@@ -93,8 +93,8 @@ h1 {
 .hoeraPageContainer,
 .boePageContainer,
 .gamePageContainer {
-  width: 80vw;
-  height: 450px;
+  width: 90vw;
+  height: 500px;
   position: absolute;
   top: 0;
   bottom: 0;
@@ -126,11 +126,6 @@ h1 {
 
 .buttonMijnBeurt--Boe {
   background-color: #ff7bac;
-}
-
-.buttonMijnBeurt--Hoera:active,
-.buttonMijnBeurt--Boe:active {
-  background-color: rgb(128, 255, 206);
 }
 
 .boePageBody {
@@ -220,14 +215,50 @@ h1 {
 .key {
   height: 10vw;
   width: 10vw;
-  background-color: rgb(187, 187, 187);
+  background-color: white;
   color: black;
-  font-size: 18px;
-  border-radius: 10px;
+  font-size: 25px;
   outline: none;
   border: none;
 }
 
 .key:active {
-  background-color: #9cd4d6;
+  background-color: #ff7bac;
+}
+
+@media (min-width: 1281px) {
+  body {
+    width: 100vw;
+  }
+
+  .IndexPageContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .openingImage {
+    width: 350px;
+  }
+
+  .gamePageContainer {
+    width: 50vw;
+  }
+
+  .gridInput {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-gap: 1px;
+    margin: 20px 0px 0px 0px;
+  }
+
+  .key {
+    height: 50px;
+    width: 50px;
+    background-color: white;
+    color: black;
+    font-size: 25px;
+    outline: none;
+    border: none;
+  }
 }
