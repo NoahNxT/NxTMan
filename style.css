@@ -232,3 +232,19 @@ h1 {
 .key:active {
   color: #ff7bac;
 }
+
+/* responsive */
+
+@media (min-width: 1281px) {
+  .openingImage {
+    width: 350px;
+  }
+
+  .IndexPageContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80vw;
+    height: 600px;
+  }
+}
