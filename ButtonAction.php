@@ -28,21 +28,41 @@
 
                         $result = array_intersect($_SESSION["splitArray_word"], $_SESSION["Letters"]);
                         
+                        /*
                         echo print_r($_SESSION["splitArray_word"]).'<br>';
                         echo print_r($_SESSION["Letters"]).'<br>';
-                        echo print_r($result).'<br>';
+                        echo print_r($result).'<br>'; 
+                        echo print_r($result[2]).'<br>';
+                        */
+
+                        for ($y = 0; $y <+ count($_SESSION["splitArray_word"]); $y++) 
+                        {
+                            if(isset($result[$y]))
+                            {
+                                if ($result[$y] == $_SESSION["splitArray_word"][$y])
+                                {
+                                    echo $_SESSION["splitArray_word"][$y];
+                                }else{
+                                echo '_';
+                                }
+                            }
+                                
+                        }
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+
                     }
                     
-                    /*for ($x = 0; $x <= count($result); $x++) 
-                    {
-                        if ($result[$x] == TRUE)
-                        {
-                        echo $_SESSION["splitArray_word"][$x];
-                        }else{
-                            echo '_';
-                        }
-                    }
-                    */
+                    
+                    
 
                 }
             }
