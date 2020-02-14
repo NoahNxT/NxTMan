@@ -14,7 +14,7 @@ $_SESSION["alphas"] = range('A', 'Z');
 
 
 
-$_SESSION['counter'] = 0;
+
 
 
     

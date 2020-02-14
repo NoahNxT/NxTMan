@@ -13,11 +13,12 @@ include 'variables.php';
   </head>
   <body>
     <div class="IndexPageContainer">
+      <img class="openingImage" src="img/otherImg/opening-img.png" alt="">
       <h1>
         Hallo speler 1, bedenk een woord en zorg dat speler 2 het niet ziet!
       </h1>
-      <form method="post" action="game.php" class="formContainer">
-        <input type="text" name="chosen_word" class="formContainer__input" />
+      <form method="post" action="LoadBetweenAddDB.php" class="formContainer">
+        <input type="text" name="chosen_word" class="formContainer__input" placeholder="vb: ballon :)" />
         <input type="submit" class="formContainer__submit" value="start" />
       </form>
     </div>
