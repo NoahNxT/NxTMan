@@ -236,7 +236,8 @@ h1 {
 /* responsive */
 
 @media (min-width: 1281px) {
-  .openingImage {
+  .openingImage,
+  .hangmanImages {
     width: 350px;
   }
 
