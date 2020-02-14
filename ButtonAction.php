@@ -2,19 +2,37 @@
     include 'variables.php';
 
     
-   
+    
     
     for ($x = 0; $x < count($_SESSION["alphas"]); $x++) 
     {
     //POST-request van aangeklikte knop in variable zetten
         if( isset( $_POST[$_SESSION["alphas"][$x]] ))
         {
-            
+           
+            if ( !isset( $_SESSION['count'] ) )
+            {
+                $_SESSION['count'] = 1;
+            }else{
+                 $_SESSION['count']++;
+            }
+
+            if ($_SESSION["count"] > 10)
+            {
+                header( "Location: /boe.php");
+            }  
+
+
             for ($x = 0; $x < count($_SESSION["alphas"]); $x++) 
             {
             //POST-request van aangeklikte knop in variable zetten
                 if( isset( $_POST[$_SESSION["alphas"][$x]] ))
                 {
+
+                    
+                    
+                       
+                    
                     //POST-request van aangeklikte knop in variable zetten
                     $_SESSION["chosen_Letter"] = $_POST[$_SESSION["alphas"][$x]];
                     
@@ -41,8 +59,7 @@
 
                     if ($_SESSION["arrays_Intersect"] == $_SESSION["splitArray_word"])
                     {
-                        session_start();
-                        session_destroy();
+                        
                         header( "Location: /hoera.php");
 
                     }
