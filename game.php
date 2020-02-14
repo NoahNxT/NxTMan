@@ -33,9 +33,18 @@ include 'ButtonAction.php';
 
     <div class="gridOutput">
       <?php
-      for ($x = 1; $x <= $_SESSION["amount_Letter"]; $x++) {
-        echo '<div class="guessedLetter" id=' . $x . ' >_</div>';
-      }
+        for ($y = 0; $y <+ count($_SESSION["splitArray_word"]); $y++) 
+        {
+          if(isset($_SESSION["arrays_Intersect"][$y]))
+          {
+            if ($_SESSION["arrays_Intersect"][$y] == $_SESSION["splitArray_word"][$y])
+            {
+              echo  '<div class="guessedLetter" id='.$y.'>' .$_SESSION["splitArray_word"][$y].'</div>';
+            }
+          }else{
+            echo '<div class="guessedLetter" id=' . $y . ' >_</div>';
+          }                        
+        }
       ?>
     </div>
 

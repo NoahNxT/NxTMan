@@ -26,7 +26,7 @@
                         array_push($_SESSION["Letters"],$_SESSION["chosen_Letter"]);
                     
 
-                        $result = array_intersect($_SESSION["splitArray_word"], $_SESSION["Letters"]);
+                        $_SESSION["arrays_Intersect"] = array_intersect($_SESSION["splitArray_word"], $_SESSION["Letters"]);
                         
                         /*
                         echo print_r($_SESSION["splitArray_word"]).'<br>';
@@ -35,19 +35,7 @@
                         echo print_r($result[2]).'<br>';
                         */
 
-                        for ($y = 0; $y <+ count($_SESSION["splitArray_word"]); $y++) 
-                        {
-                            if(isset($result[$y]))
-                            {
-                                if ($result[$y] == $_SESSION["splitArray_word"][$y])
-                                {
-                                    echo $_SESSION["splitArray_word"][$y];
-                                }else{
-                                echo '_';
-                                }
-                            }
-                                
-                        }
+                        
                         
                         
                         
