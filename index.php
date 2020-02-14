@@ -1,6 +1,7 @@
 <?php
 session_start();
 include 'variables.php';
+$_SESSION['count'] = 1;
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -17,7 +18,7 @@ include 'variables.php';
       <h1>
         Hallo speler 1, bedenk een woord en zorg dat speler 2 het niet ziet!
       </h1>
-      <form method="post" action="LoadBetweenAddDB.php" class="formContainer">
+      <form method="post" action="game.php" class="formContainer">
         <input type="text" name="chosen_word" class="formContainer__input" placeholder="vb: ballon :)" />
         <input type="submit" class="formContainer__submit" value="start" />
       </form>
