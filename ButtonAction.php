@@ -1,7 +1,9 @@
 <?php
     include 'variables.php';
 
+    
    
+    
     for ($x = 0; $x < count($_SESSION["alphas"]); $x++) 
     {
     //POST-request van aangeklikte knop in variable zetten
@@ -28,36 +30,25 @@
 
                         $_SESSION["arrays_Intersect"] = array_intersect($_SESSION["splitArray_word"], $_SESSION["Letters"]);
                         
+
                         /*
                         echo print_r($_SESSION["splitArray_word"]).'<br>';
                         echo print_r($_SESSION["Letters"]).'<br>';
                         echo print_r($result).'<br>'; 
                         echo print_r($result[2]).'<br>';
                         */
+                    }
 
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
+                    if ($_SESSION["arrays_Intersect"] == $_SESSION["splitArray_word"])
+                    {
+                        session_start();
+                        session_destroy();
+                        header( "Location: /hoera.php");
 
                     }
-                    
-                    
-                    
-
                 }
             }
             
-
-           
-           
             // $Compare = array_intersect($_SESSION["splitArray_word"], $_SESSION["Letters"]);
             //print_r($_SESSION["Letters"]);
             //print_r($_SESSION["splitArray_word"]);
@@ -77,6 +68,8 @@
 
         }
     }
+
+    
 
     
     

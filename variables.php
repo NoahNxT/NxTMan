@@ -11,4 +11,5 @@ if (isset($_POST["chosen_word"]))
 
 $_SESSION["alphas"] = range('A', 'Z');
 
+
 ?>
